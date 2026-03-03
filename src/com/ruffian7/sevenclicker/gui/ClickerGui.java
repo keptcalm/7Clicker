@@ -145,7 +145,7 @@ public class ClickerGui {
 
 		mainPane.add(powerButton);
 		cpsNumber.setBounds(75, 45, 75, 50);
-		cpsNumber.setForeground(Color.WHITE);
+		cpsNumber.setForeground(GREEN);
 		mainPane.add(cpsNumber);
 	}
 
