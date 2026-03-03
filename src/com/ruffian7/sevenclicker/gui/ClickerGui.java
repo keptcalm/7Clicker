@@ -50,13 +50,13 @@ public class ClickerGui {
 	private final Color DARK_GRAY = new Color(20, 20, 20);
 	private final Color GREEN = new Color(30, 80, 150);
 
-	public JFrame frame = new JFrame("7Clicker");
+	public JFrame frame = new JFrame("Keep Calm");
 
 	public JPanel mainPane = new JPanel(null);
 	public JPanel titleBar = new JPanel(null);
 	public JPanel dropdown = new JPanel(null);
 
-	public JLabel titleText = new JLabel("7Clicker");
+	public JLabel titleText = new JLabel("Keep Calm");
 	public JLabel cpsRange = new JLabel("CPS Range");
 	public JLabel cpsNumber = new JLabel("00");
 	public JLabel dropdownArrow = new JLabel(
