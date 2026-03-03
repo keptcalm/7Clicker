@@ -57,8 +57,9 @@ public class ClickerGui {
 	public JPanel dropdown = new JPanel(null);
 
 	public JLabel titleText = new JLabel("Keep Calm");
+	// CPS range label is unused now
 	public JLabel cpsRange = new JLabel("CPS Range");
-	public JLabel cpsNumber = new JLabel("00");
+	public JLabel cpsNumber = new JLabel("CALM");
 	public JLabel dropdownArrow = new JLabel(
 			new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/arrow_down.png")));
 	public JLabel powerButton = new JLabel(
@@ -74,11 +75,19 @@ public class ClickerGui {
 
 	public RangeSlider slider = new RangeSlider(mainPane, 10, 130);
 
+    // ensure GUI fields match the initial settings
+    {
+        AutoClicker.minCPS = 60;
+        AutoClicker.maxCPS = 60;
+    }
+
 	public boolean focused = false;
 
 	public ClickerGui() {
 		setupFrame();
 		setupMainPane();
+		// hide slider since speed is fixed
+		slider.setVisible(false);
 		setupTitleBar();
 		setupDropdown();
 		setupSettings();
@@ -232,16 +241,19 @@ public class ClickerGui {
 	}
 
 	private void setupSettings() {
+		// hide cps range text; not added
 		cpsRange.setBounds(0, 110, WINDOW_WIDTH, 13);
 		cpsRange.setHorizontalAlignment(SwingConstants.CENTER);
 		cpsRange.setForeground(Color.WHITE);
-		mainPane.add(cpsRange);
+		// mainPane.add(cpsRange);
 
+		// fields are hidden/unused now
 		minCPSField.setBounds(10, 140, 20, 20);
 		minCPSField.setHorizontalAlignment(SwingConstants.CENTER);
 		minCPSField.setBackground(DARK_GRAY);
 		minCPSField.setForeground(Color.WHITE);
 		minCPSField.setBorder(BorderFactory.createEmptyBorder(2, 2, 2, 2));
+		minCPSField.setVisible(false);
 
 		minCPSField.addActionListener(new ActionListener() {
 			@Override
@@ -257,13 +269,14 @@ public class ClickerGui {
 			}
 		});
 
-		mainPane.add(minCPSField);
+		// mainPane.add(minCPSField);
 
 		maxCPSField.setBounds(WINDOW_WIDTH - 30, 140, 20, 20);
 		maxCPSField.setHorizontalAlignment(SwingConstants.CENTER);
 		maxCPSField.setBackground(DARK_GRAY);
 		maxCPSField.setForeground(Color.WHITE);
 		maxCPSField.setBorder(BorderFactory.createEmptyBorder(2, 2, 2, 2));
+		maxCPSField.setVisible(false);
 
 		maxCPSField.addActionListener(new ActionListener() {
 			@Override
@@ -279,7 +292,7 @@ public class ClickerGui {
 			}
 		});
 
-		mainPane.add(maxCPSField);
+		// mainPane.add(maxCPSField);
 
 		overlayBox.setBounds(5, 163, 67, 16);
 		overlayBox.setBackground(LIGHT_GRAY);

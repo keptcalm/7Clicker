@@ -43,8 +43,8 @@ public class MouseListener implements NativeMouseListener {
 			if (lastClickTime == 0) {
 				lastClickTime = System.currentTimeMillis();
 			} else if (System.currentTimeMillis() != lastClickTime) {
-				int cps = Math.round(1000.0f / (System.currentTimeMillis() - lastClickTime));
-				AutoClicker.gui.cpsNumber.setText((cps < 10) ? "0" + cps : String.valueOf(cps));
+				// always show fixed calm text instead of CPS number
+				AutoClicker.gui.cpsNumber.setText("CALM");
 				lastClickTime = 0;
 			}
 		}
