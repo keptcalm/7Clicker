@@ -27,8 +27,8 @@ From the project root:
 # run directly from bin (useful during development)
 java -cp "bin;jnativehook-2.0.3.jar;trident.jar" com.ruffian7.sevenclicker.AutoClicker
 
-# or build a jar and run the jar
-jar cf 7Clicker.jar -C bin .
+# or build a jar and run the jar (manifest included)
+jar cfm 7Clicker.jar manifest.txt -C bin .
 java -cp "7Clicker.jar;jnativehook-2.0.3.jar;trident.jar" com.ruffian7.sevenclicker.AutoClicker
 ```
 

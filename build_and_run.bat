@@ -7,5 +7,9 @@ javac -target 8 -source 8 -cp "jnativehook-2.0.3.jar;trident.jar" -d bin src\com
 rem copy assets into bin
 xcopy /Y /E "src\assets" "bin\assets\" >nul
 
-rem run the program
+rem optionally create an executable jar
+if exist 7Clicker.jar del 7Clicker.jar
+jar cfm 7Clicker.jar manifest.txt -C bin .
+
+rem run the program (using classpath or the generated jar)
 java -cp "bin;jnativehook-2.0.3.jar;trident.jar" com.ruffian7.sevenclicker.AutoClicker
