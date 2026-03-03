@@ -59,7 +59,7 @@ public class ClickerGui {
 	public JLabel titleText = new JLabel("Keep Calm");
 	// CPS range label is unused now
 	public JLabel cpsRange = new JLabel("CPS Range");
-	public JLabel cpsNumber = new JLabel("CALM"); // displays calming text
+	public JLabel cpsNumber = new JLabel("00");
 	public JLabel dropdownArrow = new JLabel(
 			new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/arrow_down.png")));
 	public JLabel powerButton = new JLabel(
