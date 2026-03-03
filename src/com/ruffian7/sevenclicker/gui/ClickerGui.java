@@ -410,7 +410,7 @@ public class ClickerGui {
 			fontFile.close();
 
 			titleText.setFont(font.deriveFont(Font.PLAIN, 25));
-			cpsNumber.setFont(font.deriveFont(Font.PLAIN, 69));
+			// cpsNumber uses Arial 10 (set in setupMainPane), not BebasNeue 69
 			cpsRange.setFont(font.deriveFont(Font.PLAIN, 18));
 			overlayBox.setFont(font.deriveFont(Font.PLAIN, 14));
 			rightClickBox.setFont(font.deriveFont(Font.PLAIN, 14));
