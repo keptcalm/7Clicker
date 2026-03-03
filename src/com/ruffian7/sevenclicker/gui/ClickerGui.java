@@ -47,9 +47,9 @@ public class ClickerGui {
 	private final int WINDOW_HEIGHT = 125;
 	private final int DROPDOWN_HEIGHT = 100;
 
-	private final Color LIGHT_GRAY = new Color(60, 70, 73);
-	private final Color DARK_GRAY = new Color(45, 47, 49);
-	private final Color GREEN = new Color(35, 168, 105);
+	private final Color LIGHT_GRAY = new Color(40, 40, 40);
+	private final Color DARK_GRAY = new Color(20, 20, 20);
+	private final Color GREEN = new Color(30, 80, 150);
 
 	public JFrame frame = new JFrame("7Clicker");
 
@@ -145,7 +145,7 @@ public class ClickerGui {
 
 		mainPane.add(powerButton);
 		cpsNumber.setBounds(75, 45, 75, 50);
-		cpsNumber.setForeground(GREEN);
+		cpsNumber.setForeground(Color.WHITE);
 		mainPane.add(cpsNumber);
 	}
 

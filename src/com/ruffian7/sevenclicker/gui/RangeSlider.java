@@ -91,7 +91,7 @@ public class RangeSlider extends JPanel {
 		g2d.setColor(new Color(45, 47, 49));
 		g2d.fill(sliderBody);
 
-		g2d.setColor(new Color(35, 168, 105));
+		g2d.setColor(new Color(30, 80, 150));
 		g2d.fill(sliderRange);
 
 		g2d.setColor(Color.BLACK);
