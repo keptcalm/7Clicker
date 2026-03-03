@@ -1,0 +1,10 @@
+# ignore compiled classes and build artifacts
+/bin/
+/*.jar
+
+# temporary IDE or OS files
+*.log
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
