@@ -59,7 +59,7 @@ public class ClickerGui {
 	public JLabel titleText = new JLabel("Keep Calm");
 	// CPS range label is unused now
 	public JLabel cpsRange = new JLabel("CPS Range");
-	public JLabel cpsNumber = new JLabel("CALM");
+	public JLabel cpsNumber = new JLabel("CALM"); // displays calming text
 	public JLabel dropdownArrow = new JLabel(
 			new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/arrow_down.png")));
 	public JLabel powerButton = new JLabel(
@@ -159,7 +159,9 @@ public class ClickerGui {
 		});
 
 		mainPane.add(powerButton);
-		cpsNumber.setBounds(75, 45, 75, 50);
+		// enlarge label so "CALM" fits
+		cpsNumber.setBounds(70, 40, 100, 60);
+		cpsNumber.setFont(new Font("arial", Font.BOLD, 20));
 		cpsNumber.setForeground(GREEN);
 		mainPane.add(cpsNumber);
 	}
@@ -245,6 +247,7 @@ public class ClickerGui {
 		cpsRange.setBounds(0, 110, WINDOW_WIDTH, 13);
 		cpsRange.setHorizontalAlignment(SwingConstants.CENTER);
 		cpsRange.setForeground(Color.WHITE);
+		cpsRange.setVisible(false);
 		// mainPane.add(cpsRange);
 
 		// fields are hidden/unused now
