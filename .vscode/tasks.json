@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-target", "8",
+                "-source", "8",
+                "-cp", "jnativehook-2.0.3.jar;trident.jar",
+                "-d", "bin",
+                "src/com/ruffian7/sevenclicker/AutoClicker.java",
+                "src/com/ruffian7/sevenclicker/gui/ClickerGui.java",
+                "src/com/ruffian7/sevenclicker/gui/RangeSlider.java",
+                "src/com/ruffian7/sevenclicker/listener/KeyListener.java",
+                "src/com/ruffian7/sevenclicker/listener/MouseListener.java"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "copy assets",
+            "type": "shell",
+            "command": "xcopy",
+            "args": ["/Y", "/E", "src\\assets", "bin\\assets\\"],
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "java",
+            "args": ["-cp", "bin;jnativehook-2.0.3.jar;trident.jar", "com.ruffian7.sevenclicker.AutoClicker"],
+            "group": "none",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "build & run",
+            "dependsOn": ["build", "copy assets"],
+            "command": "java",
+            "args": ["-cp", "bin;jnativehook-2.0.3.jar;trident.jar", "com.ruffian7.sevenclicker.AutoClicker"],
+            "type": "shell",
+            "group": "build",
+            "presentation": {"reveal": "always"}
+        }
+    ]
+}
