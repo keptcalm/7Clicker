@@ -160,8 +160,9 @@ public class ClickerGui {
 
 		mainPane.add(powerButton);
 		// enlarge label so "CALM" fits
-		cpsNumber.setBounds(70, 40, 100, 60);
-		cpsNumber.setFont(new Font("arial", Font.BOLD, 20));
+		cpsNumber.setBounds(5, 45, 140, 50);
+		cpsNumber.setHorizontalAlignment(SwingConstants.CENTER);
+		cpsNumber.setFont(new Font("arial", Font.BOLD, 18));
 		cpsNumber.setForeground(GREEN);
 		mainPane.add(cpsNumber);
 	}
