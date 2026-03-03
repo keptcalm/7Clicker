@@ -162,7 +162,6 @@ public class ClickerGui {
 		// center-aligned label to avoid right-edge clipping
 		cpsNumber.setBounds(55, 50, 95, 45);
 		cpsNumber.setHorizontalAlignment(SwingConstants.CENTER);
-		cpsNumber.setFont(new Font("arial", Font.BOLD, 16));
 		cpsNumber.setForeground(GREEN);
 		mainPane.add(cpsNumber);
 	}
@@ -410,7 +409,7 @@ public class ClickerGui {
 			fontFile.close();
 
 			titleText.setFont(font.deriveFont(Font.PLAIN, 25));
-			// cpsNumber uses Arial 10 (set in setupMainPane), not BebasNeue 69
+			cpsNumber.setFont(font.deriveFont(Font.PLAIN, 69));
 			cpsRange.setFont(font.deriveFont(Font.PLAIN, 18));
 			overlayBox.setFont(font.deriveFont(Font.PLAIN, 14));
 			rightClickBox.setFont(font.deriveFont(Font.PLAIN, 14));
