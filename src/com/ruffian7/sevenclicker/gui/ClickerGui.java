@@ -162,7 +162,7 @@ public class ClickerGui {
 		// center-aligned label to avoid right-edge clipping
 		cpsNumber.setBounds(55, 50, 95, 45);
 		cpsNumber.setHorizontalAlignment(SwingConstants.CENTER);
-		cpsNumber.setFont(new Font("arial", Font.BOLD, 10));
+		cpsNumber.setFont(new Font("arial", Font.BOLD, 16));
 		cpsNumber.setForeground(GREEN);
 		mainPane.add(cpsNumber);
 	}
