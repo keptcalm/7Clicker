@@ -159,10 +159,10 @@ public class ClickerGui {
 		});
 
 		mainPane.add(powerButton);
-		// position label to right of button, wide enough for full CALM text
-		cpsNumber.setBounds(62, 50, 88, 45);
+		// position label to right of button, give extra width for text
+		cpsNumber.setBounds(60, 50, 90, 45);
 		cpsNumber.setHorizontalAlignment(SwingConstants.LEFT);
-		cpsNumber.setFont(new Font("arial", Font.BOLD, 12));
+		cpsNumber.setFont(new Font("arial", Font.BOLD, 11));
 		cpsNumber.setForeground(GREEN);
 		mainPane.add(cpsNumber);
 	}
