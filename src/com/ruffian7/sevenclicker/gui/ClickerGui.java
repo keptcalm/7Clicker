@@ -38,7 +38,6 @@ import javax.swing.text.DocumentFilter;
 
 import org.pushingpixels.trident.Timeline;
 
-import com.apple.eawt.Application;
 import com.ruffian7.sevenclicker.AutoClicker;
 
 public class ClickerGui {
@@ -96,10 +95,17 @@ public class ClickerGui {
 		frame.setAlwaysOnTop(true);
 		frame.setResizable(false);
 
-		if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			Application.getApplication().setDockIconImage(
-					new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/7Clicker.png")).getImage());
-		} else {
+		try {
+			if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+				Class<?> appClass = Class.forName("com.apple.eawt.Application");
+				Object app = appClass.getMethod("getApplication").invoke(null);
+				appClass.getMethod("setDockIconImage", java.awt.Image.class).invoke(app,
+						new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/7Clicker.png")).getImage());
+			} else {
+				frame.setIconImage(
+						new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/7Clicker.png")).getImage());
+			}
+		} catch (Exception e) {
 			frame.setIconImage(
 					new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/7Clicker.png")).getImage());
 		}
